@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보 처리방침 — bnbd</title>
+<meta name="description" content="bnbd가 개발·운영하는 모바일 애플리케이션(Fox Player, 파킹QR 등)에 공통으로 적용되는 개인정보 처리방침입니다.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<style>
+  :root{
+    --indigo:#6366F1;
+    --violet:#8B5CF6;
+    --ink:#1a1a2e;
+    --gray-700:#4b4b5a;
+    --gray-500:#6f6f80;
+    --gray-200:#e7e7ee;
+    --gray-100:#f4f4f9;
+    --bg:#ffffff;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.7;
+  }
+  a{color:var(--indigo);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--gray-200);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1080px;margin:0 auto;padding:0 24px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-0.02em;}
+  .brand img{width:34px;height:34px;border-radius:9px;}
+
+  .page-head{padding:64px 0 32px;}
+  .eyebrow{
+    display:inline-block;
+    font-size:13px;font-weight:700;color:var(--indigo);
+    background:rgba(99,102,241,0.1);
+    padding:6px 14px;border-radius:999px;margin-bottom:18px;
+    letter-spacing:0.02em;
+  }
+  h1{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;}
+  .updated{color:var(--gray-500);font-size:14px;}
+
+  main{padding-bottom:96px;}
+  .app-list{
+    display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 8px;
+  }
+  .app-chip{
+    background:var(--gray-100);border:1px solid var(--gray-200);
+    border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700;
+    color:var(--gray-700);
+  }
+  .app-chip b{color:var(--ink);}
+
+  .notice{
+    background:var(--gray-100);border-radius:var(--radius);
+    padding:20px 24px;margin:28px 0;font-size:14.5px;color:var(--gray-700);
+    border:1px solid var(--gray-200);
+  }
+
+  section.doc-section{margin-top:44px;}
+  h2{
+    font-size:19px;font-weight:800;letter-spacing:-0.01em;
+    margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--ink);
+  }
+  h3{font-size:16px;font-weight:700;margin:22px 0 8px;color:var(--ink);}
+  p{color:var(--gray-700);font-size:15px;margin-bottom:12px;}
+  ul, ol{color:var(--gray-700);font-size:15px;margin:0 0 12px 0;padding-left:22px;}
+  li{margin-bottom:6px;}
+  li ul{margin-top:6px;}
+
+  table{
+    width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:14px;
+  }
+  th, td{
+    border:1px solid var(--gray-200);padding:10px 12px;text-align:left;
+    vertical-align:top;color:var(--gray-700);
+  }
+  th{background:var(--gray-100);font-weight:700;color:var(--ink);width:22%;}
+
+  .app-block{
+    border:1px solid var(--gray-200);border-radius:var(--radius);
+    padding:24px 26px;margin-bottom:18px;
+  }
+  .app-block h3{margin-top:0;font-size:17px;display:flex;align-items:center;gap:10px;}
+  .app-block .pkg{
+    font-size:12px;font-weight:600;color:var(--gray-500);
+    background:var(--gray-100);padding:3px 9px;border-radius:6px;
+  }
+
+  footer{padding:40px 0;border-top:1px solid var(--gray-200);}
+  .footer-row{
+    max-width:1080px;margin:0 auto;padding:0 24px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  }
+  .footer-brand{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--gray-700);}
+  .footer-brand img{width:22px;height:22px;border-radius:6px;}
+  footer .copy{font-size:13px;color:var(--gray-500);}
+  footer .footer-links{display:flex;gap:18px;font-size:13px;color:var(--gray-500);}
+
+  @media (max-width:760px){
+    table, thead, tbody, th, td, tr{display:block;}
+    th{width:auto;border-bottom:none;}
+    td{border-top:none;}
+    tr{border:1px solid var(--gray-200);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="bnbd 로고">
+      bnbd
+    </a>
+    <a href="index.html">← 홈으로</a>
+  </div>
+</header>
+
+<div class="page-head wrap">
+  <span class="eyebrow">Privacy Policy</span>
+  <h1>개인정보 처리방침</h1>
+  <p class="updated">시행일: 2026년 9월 14일</p>
+  <div class="app-list">
+    <span class="app-chip">적용 앱: <b>Fox Player</b> (com.bnbd.foxplayer)</span>
+    <span class="app-chip">적용 앱: <b>파킹QR</b> (com.parkingqr.parking_qr_app)</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="notice">
+    이 개인정보 처리방침은 <b>bnbd</b>(이하 "개발자")가 개발·배포·운영하는 모든 모바일 애플리케이션에
+    공통으로 적용되는 통합 방침입니다. 현재 적용 대상은 <b>Fox Player</b>, <b>파킹QR</b>이며,
+    개발자가 새로운 앱을 출시할 경우 별도 고지 없이 이 방침이 함께 적용될 수 있습니다.
+    앱별로 수집하는 정보 항목이 다르므로, 각 앱에 해당하는 섹션을 확인해 주세요.
+  </div>
+
+  <section class="doc-section">
+    <h2>1. 개인정보의 처리 목적</h2>
+    <p>
+      개발자는 각 앱이 제공하는 서비스의 목적 범위 내에서만 개인정보를 처리하며,
+      이용 목적이 변경되는 경우 관련 법령에 따라 별도의 동의를 받는 등 필요한 조치를 이행합니다.
+    </p>
+  </section>
+
+  <section class="doc-section">
+    <h2>2. 앱별 수집 항목 및 이용 목적</h2>
+
+    <div class="app-block">
+      <h3>Fox Player <span class="pkg">com.bnbd.foxplayer</span></h3>
+      <p>
+        Fox Player는 기기에 저장된 음악 파일을 재생하는 로컬 뮤직 플레이어입니다.
+        회원가입·로그인 기능이 없으며, 서버로 어떠한 개인정보도 전송하지 않습니다.
+      </p>
+      <table>
+        <tr><th>수집 항목</th><td>수집하지 않음 (개인을 식별할 수 있는 정보를 처리하지 않습니다)</td></tr>
+        <tr><th>접근 권한</th>
+          <td>
+            <ul>
+              <li>음악/오디오 파일 접근 권한 (<code>READ_MEDIA_AUDIO</code>) — 기기 내 음악 라이브러리를 스캔하기 위해 필요</li>
+              <li>모든 파일 접근 권한 (<code>MANAGE_EXTERNAL_STORAGE</code>, 선택) — 가사(.lrc) 파일을 읽고 쓰기 위해 필요. 미허용 시에도 기본 재생 기능은 정상 동작</li>
+              <li>알림 권한 — 재생 중 알림/잠금화면 컨트롤 표시</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>보관 위치</th><td>사용자가 직접 입력한 가사, 즐겨찾기, 재생목록, 최근 재생 기록 등은 모두 <b>기기 내부 저장소</b>에만 저장되며 외부로 전송되지 않습니다.</td></tr>
+        <tr><th>제3자 제공</th><td>없음</td></tr>
+      </table>
+    </div>
+
+    <div class="app-block">
+      <h3>파킹QR <span class="pkg">com.parkingqr.parking_qr_app</span></h3>
+      <p>
+        파킹QR은 차량에 부착한 QR코드를 통해 방문자가 차주에게 전화·문자를 요청하고,
+        차주가 앱에서 이를 확인해 응답(전화 연결, 답장)할 수 있도록 중계하는 서비스입니다.
+        차주의 실제 전화번호는 방문자에게 노출되지 않습니다.
+      </p>
+      <table>
+        <tr><th>수집 항목 (차주/앱 이용자)</th>
+          <td>
+            <ul>
+              <li>휴대전화번호 (전화번호 로그인/인증)</li>
+              <li>구글 계정 정보 — 구글 로그인 이용 시 이메일, 이름, 프로필 사진</li>
+              <li>차량 프로필 정보 — 사용자가 직접 입력하는 차량번호, 별칭 등 프로필 항목</li>
+              <li>FCM 푸시 토큰 — 새 요청 도착 시 알림 발송을 위한 기기 식별 토큰</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>수집 항목 (방문자)</th>
+          <td>
+            <ul>
+              <li>방문자가 직접 입력하는 연락처(전화번호) 및 메시지 내용 — 별도 가입/로그인 없이 요청 생성 시에만 입력</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>접근 권한</th>
+          <td>
+            <ul>
+              <li>카메라 — QR코드 스캔 (촬영된 영상/이미지를 저장하거나 서버로 전송하지 않음)</li>
+              <li>마이크 — 앱 내 음성 통화(WebRTC) 기능 사용 시에만 활성화되며, 통화 내용을 서버에 저장하지 않음</li>
+              <li>알림 — 요청 도착 시 푸시 알림 표시</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>이용 목적</th>
+          <td>전화·문자 중계 서비스 제공, 차주 본인 확인(로그인), 요청 알림(FCM 푸시) 발송, 서비스 부정이용 방지</td>
+        </tr>
+        <tr><th>보관 위치 및 제3자 제공</th>
+          <td>
+            수집된 정보는 서비스 제공을 위해 <b>Google Firebase</b>(Authentication, Firestore, Cloud Messaging, Cloud Functions)에 저장·처리됩니다.
+            Firebase는 개발자가 이용하는 클라우드 인프라(개인정보처리 위탁업체)이며, 이 외의 목적으로 제3자에게 제공되지 않습니다.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="doc-section">
+    <h2>3. 개인정보 처리 위탁</h2>
+    <p>개발자는 서비스 운영을 위해 아래와 같이 개인정보 처리업무를 위탁하고 있습니다.</p>
+    <table>
+      <tr><th>수탁업체</th><th>위탁업무 내용</th></tr>
+      <tr><td>Google LLC (Firebase)</td><td>회원 인증, 데이터베이스(Firestore) 저장, 푸시 알림(FCM) 발송, 서버 로직(Cloud Functions) 처리 — 파킹QR에 한함</td></tr>
+    </table>
+    <p>개발자는 위탁계약 체결 시 개인정보보호 관련 법규 준수, 개인정보에 관한 제3자 제공 금지 등의 내용이 명시된 계약서 등 문서를 통해 수탁자를 관리·감독합니다.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2>4. 개인정보의 보유 및 이용 기간</h2>
+    <ul>
+      <li>Fox Player: 서버에 개인정보를 보관하지 않으며, 앱 내 데이터는 사용자가 앱을 삭제하거나 데이터를 직접 삭제할 때까지 기기에만 보관됩니다.</li>
+      <li>파킹QR: 회원(차주) 탈퇴 또는 프로필 삭제 시 관련 정보를 지체 없이 파기합니다. 단, 관계 법령에 따라 보존이 필요한 경우 해당 기간 동안 별도 보관합니다. 방문자가 남긴 요청/메시지는 차주가 삭제하거나 일정 기간이 지나면 삭제될 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2>5. 이용자의 권리와 행사 방법</h2>
+    <p>
+      이용자는 언제든지 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다.
+      파킹QR의 경우 앱 내 설정 화면에서 프로필 정보를 직접 수정·삭제할 수 있으며,
+      계정 삭제 및 그 외 문의는 아래 연락처로 요청할 수 있습니다.
+    </p>
+  </section>
+
+  <section class="doc-section">
+    <h2>6. 개인정보의 파기</h2>
+    <p>개발자는 개인정보 보유 기간이 경과하거나 처리 목적이 달성된 경우 지체 없이 해당 개인정보를 파기합니다. 전자적 파일 형태의 정보는 복구할 수 없는 방법으로 영구 삭제합니다.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2>7. 아동의 개인정보</h2>
+    <p>본 앱들은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 개인정보를 의도적으로 수집하지 않습니다.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2>8. 개인정보의 안전성 확보 조치</h2>
+    <ul>
+      <li>개인정보에 대한 접근 권한을 최소한의 인원으로 제한</li>
+      <li>Firebase 등 인프라 제공업체가 제공하는 전송 구간 암호화(HTTPS/TLS) 적용</li>
+      <li>Firestore 보안 규칙을 통해 본인 소유 데이터에만 접근·수정 가능하도록 제한</li>
+    </ul>
+  </section>
+
+  <section class="doc-section">
+    <h2>9. 개인정보 처리방침의 변경</h2>
+    <p>이 개인정보 처리방침은 법령, 정책 또는 서비스의 변경사항을 반영하기 위해 수정될 수 있으며, 변경 시 본 페이지를 통해 공지합니다.</p>
+  </section>
+
+  <section class="doc-section">
+    <h2>10. 문의처</h2>
+    <table>
+      <tr><th>개발자</th><td>bnbd</td></tr>
+      <tr><th>이메일</th><td><a href="mailto:sosim13p@gmail.com">sosim13p@gmail.com</a></td></tr>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-row">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/logo.svg" alt="bnbd 로고">
+      bnbd
+    </a>
+    <div class="footer-links">
+      <a href="privacy.html">개인정보 처리방침</a>
+    </div>
+    <div class="copy">© 2026 bnbd. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
