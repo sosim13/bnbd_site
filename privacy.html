@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>개인정보 처리방침 — bnbd</title>
-<meta name="description" content="bnbd가 개발·운영하는 모바일 애플리케이션(Fox Player, 파킹QR 등)에 공통으로 적용되는 개인정보 처리방침입니다.">
+<meta name="description" content="bnbd가 개발·운영하는 모바일 애플리케이션(Fox Player, 파킹QR, AIMemo, 로또 탐색기, MotionTouch 등)에 공통으로 적용되는 개인정보 처리방침입니다.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
 <style>
@@ -133,18 +133,22 @@
 <div class="page-head wrap">
   <span class="eyebrow">Privacy Policy</span>
   <h1>개인정보 처리방침</h1>
-  <p class="updated">시행일: 2026년 9월 14일</p>
+  <p class="updated">시행일: 2026년 11월 16일</p>
   <div class="app-list">
     <span class="app-chip">적용 앱: <b>Fox Player</b> (com.bnbd.foxplayer)</span>
     <span class="app-chip">적용 앱: <b>파킹QR</b> (com.parkingqr.parking_qr_app)</span>
+    <span class="app-chip">적용 앱: <b>AIMemo</b> (com.aimemo.aimemo)</span>
+    <span class="app-chip">적용 서비스: <b>AIMemo 저장</b> (Chrome 확장 프로그램)</span>
+    <span class="app-chip">적용 서비스: <b>로또 탐색기</b> (웹/PWA)</span>
+    <span class="app-chip">적용 앱: <b>MotionTouch</b> (com.bnbd.motiontouch)</span>
   </div>
 </div>
 
 <main class="wrap">
 
   <div class="notice">
-    이 개인정보 처리방침은 <b>bnbd</b>(이하 "개발자")가 개발·배포·운영하는 모든 모바일 애플리케이션에
-    공통으로 적용되는 통합 방침입니다. 현재 적용 대상은 <b>Fox Player</b>, <b>파킹QR</b>이며,
+    이 개인정보 처리방침은 <b>bnbd</b>(이하 "개발자")가 개발·배포·운영하는 모든 모바일 애플리케이션·웹 서비스에
+    공통으로 적용되는 통합 방침입니다. 현재 적용 대상은 <b>Fox Player</b>, <b>파킹QR</b>, <b>AIMemo</b>(앱 및 Chrome 확장 프로그램), <b>로또 탐색기</b>, <b>MotionTouch</b>이며,
     개발자가 새로운 앱을 출시할 경우 별도 고지 없이 이 방침이 함께 적용될 수 있습니다.
     앱별로 수집하는 정보 항목이 다르므로, 각 앱에 해당하는 섹션을 확인해 주세요.
   </div>
@@ -227,6 +231,137 @@
         </tr>
       </table>
     </div>
+
+    <div class="app-block">
+      <h3>AIMemo <span class="pkg">com.aimemo.aimemo</span></h3>
+      <p>
+        AIMemo는 URL·텍스트·이미지를 메모로 저장하고 AI가 요약·분류해 주는 메모 앱입니다.
+        AI 분석은 기기 안에서 동작하는 온디바이스 모델(Gemma)로 처리하며, 메모 내용을 외부 AI 서비스로 전송하지 않습니다.
+      </p>
+      <table>
+        <tr><th>수집 항목</th>
+          <td>
+            <ul>
+              <li>구글 계정 정보 — 구글 로그인 이용 시 이메일, 이름, 계정 식별자</li>
+              <li>이용자가 작성·저장한 메모 데이터 — 제목, 내용, 카테고리, 원본 URL, 썸네일/첨부 이미지, 주소·검색어·좌표(장소 메모), 독서 기록, 처리 이력</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>접근 권한</th>
+          <td>
+            <ul>
+              <li>인터넷 — 로그인, 클라우드 동기화, URL 본문·지도 정보 조회</li>
+              <li>위치(<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>) — 지도에서 현재 위치 표시. 현재 위치는 서버에 저장하지 않음</li>
+              <li>알림 / 포그라운드 서비스(데이터 동기화) — 백그라운드 메모 처리 진행 상태 표시</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>보관 위치</th>
+          <td>
+            메모는 우선 <b>기기 내부 DB</b>에 저장되며, 로그인 후 동기화를 사용하면 <b>Supabase</b>에 저장됩니다.
+            서버 데이터는 행 단위 보안(RLS)으로 본인 계정만 접근할 수 있습니다. 앱 설정값은 기기의 보안 저장소에 보관됩니다.
+          </td>
+        </tr>
+        <tr><th>외부 서비스 이용</th>
+          <td>이용자가 저장한 URL의 본문·썸네일 조회(YouTube, Instagram, TikTok 등 해당 사이트), 주소 검색(Kakao Local), 지도 표시(Naver Map)를 위해 해당 서비스에 요청이 전송될 수 있습니다.</td>
+        </tr>
+        <tr><th>제3자 제공</th><td>없음</td></tr>
+      </table>
+    </div>
+
+    <div class="app-block">
+      <h3>AIMemo 저장 <span class="pkg">Chrome 확장 프로그램</span></h3>
+      <p>
+        현재 보고 있는 웹페이지를 AIMemo 계정에 저장하고 저장된 메모를 조회하는 확장 프로그램입니다.
+        이용자가 저장 버튼을 누른 경우에만 동작하며, 브라우징 기록을 수집하지 않습니다.
+      </p>
+      <table>
+        <tr><th>수집 항목</th>
+          <td>
+            <ul>
+              <li>이용자가 저장을 실행한 페이지의 제목, 요약(og:description), 선택한 텍스트 또는 본문 발췌, 대표 이미지 주소, 원본 URL</li>
+              <li>구글 로그인 인증 정보(이메일, 로그인 토큰)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>사용 권한</th>
+          <td>
+            <ul>
+              <li><code>activeTab</code>, <code>scripting</code> — 이용자가 저장을 누른 현재 탭의 내용을 읽기 위해 사용</li>
+              <li><code>storage</code> — 로그인 세션을 브라우저 로컬 저장소에 보관</li>
+              <li><code>identity</code> — 구글 로그인(OAuth) 진행</li>
+              <li>Supabase 호스트 접근 — 메모 저장·조회</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>보관 위치 및 제3자 제공</th>
+          <td>저장된 메모는 AIMemo 앱과 동일한 <b>Supabase</b> 계정 영역에 저장되며, 제3자에게 제공하지 않습니다. 광고·분석 목적으로 사용하지 않습니다.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="app-block">
+      <h3>로또 탐색기 <span class="pkg">웹/PWA</span></h3>
+      <p>
+        로또 탐색기는 구매한 로또 티켓 기록, 당첨 정산, 가계부, 주변 판매점 정보를 제공하는 개인 로또 관리 서비스입니다.
+        통계 참고 도구이며 당첨을 보장하지 않습니다. 만 19세 이상만 이용할 수 있습니다.
+      </p>
+      <table>
+        <tr><th>수집 항목</th>
+          <td>
+            <ul>
+              <li>이메일 가입: 이메일, 비밀번호(암호화 저장), 이름</li>
+              <li>구글 로그인 이용 시: 이메일, 이름, 프로필 이미지 주소, 계정 식별자</li>
+              <li>생년월일 — 만 19세 미만 이용 제한 및 생일수 번호 구성</li>
+              <li>티켓 로그·가계부 — 회차, 구매일시, 판매점, 게임 번호, 구매 금액, QR 원문, 당첨 정산 결과, 단골 판매점, 월 예산, 알림 설정</li>
+              <li>푸시 알림 이용 시: 푸시 토큰, 기기 구분</li>
+              <li>문의/건의 이용 시: 제목, 내용, 분류</li>
+              <li>자동 수집: 로그인 세션 정보(세션 토큰, 접속 IP, 브라우저 정보), 쿠키</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>서버에 저장하지 않는 정보</th>
+          <td>
+            <ul>
+              <li>티켓 사진 원본 — QR·판매점 코드 인식은 기기(브라우저) 안에서만 처리되며 서버로 전송하지 않음</li>
+              <li>기기 위치 — 주변 판매점 표시·알림에만 사용하며 저장하지 않음</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>접근 권한</th>
+          <td>카메라(티켓 QR 촬영, 선택), 위치(주변 판매점, 선택), 알림(당첨 소식·예산 알림, 선택)</td>
+        </tr>
+        <tr><th>보관 위치 및 위탁</th>
+          <td>
+            <b>Neon</b>(데이터베이스, 싱가포르 리전), <b>Google</b>(로그인, Firebase 푸시), <b>Kakao</b>(카카오맵)를 이용합니다.
+            회원 탈퇴 시 계정의 티켓, 단골점, 푸시 토큰, 문의 내용이 함께 삭제됩니다.
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="app-block">
+      <h3>MotionTouch <span class="pkg">com.bnbd.motiontouch</span></h3>
+      <p>
+        MotionTouch는 전면 카메라로 얼굴 움직임(고개 방향 등)을 인식해 화면 스크롤·뒤로가기 같은 터치 동작을 대신 수행하는 접근성 보조 앱입니다.
+        인터넷 권한을 사용하지 않으며, 모든 처리는 기기 안에서만 이루어집니다.
+      </p>
+      <table>
+        <tr><th>수집 항목</th><td>수집하지 않음 (서버로 전송·저장되는 개인정보 없음)</td></tr>
+        <tr><th>접근 권한</th>
+          <td>
+            <ul>
+              <li>카메라 / 카메라 포그라운드 서비스 — 얼굴 움직임을 실시간 분석하기 위해 사용. 영상·이미지는 저장하거나 외부로 전송하지 않음</li>
+              <li>접근성 서비스 — 인식된 동작을 스크롤·탭 등 제스처로 수행하기 위해 사용. 화면 내용은 읽지 않으며(<code>canRetrieveWindowContent=false</code>), 현재 실행 중인 앱의 패키지명만 앱별 설정 적용에 사용</li>
+              <li>설치된 앱 목록 조회 — 앱별 동작 설정 화면에서 앱을 선택하기 위해 사용 (외부 전송 없음)</li>
+              <li>알림 / 배터리 최적화 제외 요청 — 카메라 서비스가 백그라운드에서 유지되도록 하기 위해 사용</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><th>보관 위치</th><td>앱별 동작 설정 등은 <b>기기 내부 저장소</b>에만 저장됩니다.</td></tr>
+        <tr><th>제3자 제공</th><td>없음</td></tr>
+      </table>
+    </div>
   </section>
 
   <section class="doc-section">
@@ -234,7 +369,10 @@
     <p>개발자는 서비스 운영을 위해 아래와 같이 개인정보 처리업무를 위탁하고 있습니다.</p>
     <table>
       <tr><th>수탁업체</th><th>위탁업무 내용</th></tr>
-      <tr><td>Google LLC (Firebase)</td><td>회원 인증, 데이터베이스(Firestore) 저장, 푸시 알림(FCM) 발송, 서버 로직(Cloud Functions) 처리 — 파킹QR에 한함</td></tr>
+      <tr><td>Google LLC (Firebase)</td><td>회원 인증, 데이터베이스(Firestore) 저장, 푸시 알림(FCM) 발송, 서버 로직(Cloud Functions) 처리 — 파킹QR, 로또 탐색기(로그인·푸시)</td></tr>
+      <tr><td>Supabase Inc.</td><td>회원 인증, 메모 데이터베이스 및 이미지 저장 — AIMemo(앱·확장 프로그램)</td></tr>
+      <tr><td>Neon, Inc. (AWS 싱가포르)</td><td>데이터베이스 호스팅 — 로또 탐색기</td></tr>
+      <tr><td>Kakao Corp. / Naver Cloud</td><td>지도·주소 검색 — 로또 탐색기(카카오맵), AIMemo(Kakao Local, Naver Map)</td></tr>
     </table>
     <p>개발자는 위탁계약 체결 시 개인정보보호 관련 법규 준수, 개인정보에 관한 제3자 제공 금지 등의 내용이 명시된 계약서 등 문서를 통해 수탁자를 관리·감독합니다.</p>
   </section>
@@ -243,6 +381,9 @@
     <h2>4. 개인정보의 보유 및 이용 기간</h2>
     <ul>
       <li>Fox Player: 서버에 개인정보를 보관하지 않으며, 앱 내 데이터는 사용자가 앱을 삭제하거나 데이터를 직접 삭제할 때까지 기기에만 보관됩니다.</li>
+      <li>AIMemo(앱·확장 프로그램): 계정 삭제 또는 메모 삭제 시 해당 데이터를 파기합니다. 앱 내 삭제는 동기화를 통해 서버에 반영됩니다(삭제 표시 후 파기).</li>
+      <li>로또 탐색기: 회원 탈퇴 또는 삭제 요청 시까지 보관하며, 탈퇴 시 티켓·단골점·푸시 토큰·문의 내용을 함께 삭제합니다.</li>
+      <li>MotionTouch: 서버에 개인정보를 보관하지 않으며, 설정 데이터는 앱 삭제 시까지 기기에만 보관됩니다.</li>
       <li>파킹QR: 회원(차주) 탈퇴 또는 프로필 삭제 시 관련 정보를 지체 없이 파기합니다. 단, 관계 법령에 따라 보존이 필요한 경우 해당 기간 동안 별도 보관합니다. 방문자가 남긴 요청/메시지는 차주가 삭제하거나 일정 기간이 지나면 삭제될 수 있습니다.</li>
     </ul>
   </section>
@@ -252,6 +393,7 @@
     <p>
       이용자는 언제든지 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다.
       파킹QR의 경우 앱 내 설정 화면에서 프로필 정보를 직접 수정·삭제할 수 있으며,
+      AIMemo·로또 탐색기는 각 앱/서비스 내 설정에서 데이터를 수정·삭제할 수 있습니다.
       계정 삭제 및 그 외 문의는 아래 연락처로 요청할 수 있습니다.
     </p>
   </section>
@@ -263,7 +405,7 @@
 
   <section class="doc-section">
     <h2>7. 아동의 개인정보</h2>
-    <p>본 앱들은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 개인정보를 의도적으로 수집하지 않습니다.</p>
+    <p>본 앱·서비스들은 만 14세 미만 아동을 대상으로 하지 않으며(로또 탐색기는 만 19세 이상만 이용 가능), 아동으로부터 개인정보를 의도적으로 수집하지 않습니다.</p>
   </section>
 
   <section class="doc-section">
@@ -271,7 +413,8 @@
     <ul>
       <li>개인정보에 대한 접근 권한을 최소한의 인원으로 제한</li>
       <li>Firebase 등 인프라 제공업체가 제공하는 전송 구간 암호화(HTTPS/TLS) 적용</li>
-      <li>Firestore 보안 규칙을 통해 본인 소유 데이터에만 접근·수정 가능하도록 제한</li>
+      <li>Firestore 보안 규칙, Supabase 행 단위 보안(RLS), 서버 측 접근 제어를 통해 본인 소유 데이터에만 접근·수정 가능하도록 제한</li>
+      <li>로또 탐색기 비밀번호는 복호화할 수 없는 방식으로 암호화하여 저장</li>
     </ul>
   </section>
 
@@ -297,6 +440,7 @@
       bnbd
     </a>
     <div class="footer-links">
+      <a href="portfolio.html">포트폴리오</a>
       <a href="privacy.html">개인정보 처리방침</a>
     </div>
     <div class="copy">© 2026 bnbd. All rights reserved.</div>
